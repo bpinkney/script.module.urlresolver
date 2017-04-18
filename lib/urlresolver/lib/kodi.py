@@ -262,7 +262,7 @@ class CountdownDialog(object):
             start = time.time()
             expires = time_left = self.countdown
             interval = self.interval
-            while time_left > 0:
+            while False:#time_left > 0:
                 for _ in range(CountdownDialog.__INTERVALS):
                     sleep(interval * 1000 / CountdownDialog.__INTERVALS)
                     if self.is_canceled(): return
